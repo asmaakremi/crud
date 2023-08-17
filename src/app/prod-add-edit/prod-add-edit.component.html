@@ -1,0 +1,37 @@
+<h1 mat-dialog-title class="text-center ">Add new skincare product</h1>
+<form [formGroup]="productForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content  >
+        <div class="flex flex-col gap-2 pt-8 w-96 ">
+            <mat-form-field >
+                <mat-label>Product name</mat-label>
+                <input matInput  type="text" placeholder="product name" formControlName="name">
+                <button matSuffix mat-icon-button aria-label="Clear" >
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
+    
+              <mat-form-field class="form-field">
+                <mat-label>Product price</mat-label>
+                <input matInput type="number" placeholder="ex 100$" formControlName="price">
+                <button  matSuffix mat-icon-button aria-label="Clear">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
+    
+              <mat-form-field class="form-field">
+                <mat-label>Product quantity</mat-label>
+                <input matInput type="number"  placeholder="product quantity" formControlName="quantity">
+                <button  matSuffix mat-icon-button aria-label="Clear">
+                    <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
+        </div>
+        
+    </div>
+    <div mat-dialog-actions >
+        <button type="button" mat-raised-button [mat-dialog-close]="false">Close</button>
+        <button type="submit" mat-raised-button color="accent" [mat-dialog-close]="true" cdkFocusInitial>{{data ? "Update":"Save"}}</button>
+    </div>
+</form>
+
+

@@ -1,0 +1,7 @@
+/* Import Angular Material's prebuilt theme */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* Import Tailwind CSS styles */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
